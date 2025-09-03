@@ -10,11 +10,11 @@ const Background = process.env.BACKGROUND_COLOR || "black";
 /* GET home page. */
 router.get("/", async function (req, res, next) {
   try {
-    const url = `http://${ApiHttpHost}/albums`;
+    const url = `http://${ApiHttpHost}/api/albums`;
     console.log("Invoking album-api: " + url);
     axios.headers = { "Content-Type": "application/json" };
     var response = await axios.get(url);
-    data = response.data || [];
+    data = response.data.data || [];  // Extract the data array from the API response
     console.log("Response from backend albums api: ", data);
     res.render("index", {
       albums: data,
