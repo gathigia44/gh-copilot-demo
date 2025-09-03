@@ -1,15 +1,15 @@
 {
 	"servers": {
-		// "Azure DevOps": {
-		// 	"type": "stdio",
-		// 	"command": "npx",
-		// 	"args": [
-		// 		"-y",
-		// 		"@azure-devops/mcp",
-		// 		"${input:ado_org}"
-		// 	],
-		// 	"version": "0.0.1"
-		// },
+		"Azure DevOps": {
+			"type": "stdio",
+			"command": "npx",
+			"args": [
+				"-y",
+				"@azure-devops/mcp",
+				"${input:ado_org}"
+			],
+			"version": "0.0.1"
+		},
 		"Microsoft Learn": {
 			"url": "https://learn.microsoft.com/api/mcp",
 			"type": "http"
